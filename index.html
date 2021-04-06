@@ -1,0 +1,964 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LeadME test task</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="#">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/header_style.css">
+		<link rel="stylesheet" href="css/footer_style.css">
+		<link rel="stylesheet" href="css/modal.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="script.js"></script>
+	</head>
+	
+	<body>
+	
+
+	
+		<header>
+		
+			<div class="header_container">
+			
+				<div class="logo"><p>лого</p></div>
+				
+				<div class="navigation_bar">
+						
+					<div  class="wrapper_dropdown">
+						<span class="ddwn">Грузы <img class="ddwn" src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown1" class="dropdown">
+							<a  href="#">Грузы списком</a>
+							<a href="#">Грузы на карте</a>
+						</div>
+					</div>
+					
+					<div class="wrapper_dropdown">
+						<span class="ddwn">Транспорт <img class="ddwn" src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown2" class="dropdown">
+							<a href="#">Транспорт списком</a>
+							<a href="#">Расчитать стоимость</a>
+						</div>
+					</div>
+					
+					<div class="wrapper_dropdown">
+						<span class="ddwn">Аукцион <img class="ddwn" src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown3" class="dropdown">
+							<a href="#">Транспорт</a>
+							<a href="#">Грузы</a>
+						</div>
+					</div>
+					
+					<div class="wrapper_dropdown">
+						<span>О нас</span>
+					</div>
+					
+					<div class="wrapper_dropdown">
+						<span>Новости</span>
+					</div>
+
+				</div>
+				
+				<div class="tools_bar">
+				
+					<img id="search_icon1" class="search_icon" src="icons/searchicon.png" alt="search icon">
+					
+					<div class="search_window">
+					
+						<div class="search_pole">
+						
+							<img id="search_icon2" class="search_icon" src="icons/searchicon.png" alt="search icon">
+							<input type="search" placeholder="Введите свой поисковой запрос">
+							<input type="submit" value="Найти">
+						
+						</div>
+						
+						<div class="search_window_button_bar">
+							
+							<div class="search_window_button_bar_str">
+								<p>Грузы</p>
+							</div>
+							
+							<div class="search_window_str"></div>
+							
+							<div class="search_window_button_bar_str">
+								<p>Транспорт</p>
+							</div>
+							
+							<div class="search_window_str"></div>
+							
+							<div class="search_window_button_bar_str">
+								<p>Аукционы</p>
+							</div>
+							
+							<div class="search_window_str"></div>
+							
+							<div class="search_window_button_bar_str">
+								<p>Новости</p>
+							</div>
+							
+						</div>
+					
+					</div>
+				
+					<div id="wrapper_dropdown_4" class="wrapper_dropdown">
+						<span id="currency_name" class="ddwn">Eur <img class="ddwn" src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown4" class="dropdown">
+							<h2 class="ddwn">Валюта на сайте</h2>
+							
+							<div class="dropdown4_str">
+								<input type="radio" id="check1" checked="checked" onclick="currencyCheck(event)">
+								<label for="check1">EUR</label>
+							</div>
+							<div class="dropdown4_str" >
+								<input type="radio" id="check2" onclick="currencyCheck(event)">
+								<label for="check2">USD</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check3" onclick="currencyCheck(event)">
+								<label for="check3">ZL</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check4" onclick="currencyCheck(event)">
+								<label for="check4">BYN</label>
+							</div>
+						</div>
+					</div>
+					
+					<div id="wrapper_dropdown_5" class="wrapper_dropdown">
+						<span id="lang_name" class="ddwn">Ru <img class="ddwn" src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown5" class="dropdown">
+							<h2 class="ddwn">Язык</h2>
+							
+							<div class="dropdown4_str">
+								<input type="radio" id="check5" checked="checked" onclick="languageCheck(event)">
+								<label for="check5">Русский</label>
+							</div>
+							<div class="dropdown4_str" >
+								<input type="radio" id="check6" onclick="languageCheck(event)">
+								<label for="check6">Английский</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check7" onclick="languageCheck(event)">
+								<label for="check7">Польский</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check8" onclick="languageCheck(event)">
+								<label for="check8">Белорусский</label>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="vertical_str"></div>
+					
+					<img class="star_icon" src="icons/star.png" alt="star icon">
+					
+					
+					<div id="wrapper_dropdown_7" class="wrapper_dropdown">
+					
+						<img class="bell_icon" src="icons/bell.png" alt="bell icon">
+						<img class="note_icon" src="icons/note.png" alt="notification icon">
+						
+						<div id="dropdown7" class="dropdown">
+						
+							<h2 class="ddwn" >Уведомления</h2>
+							
+							<div class="current_order">
+								<h3 class="ddwn">Грузы</h3>
+								<h4 class="ddwn">Заказ №0004 Подтвердите <br>статус</h4>
+								<p class="ddwn">13:36</p>
+							</div>
+							
+							<div class="other_order">
+								<h3 class="ddwn">Транспорт</h3>
+								<p class="ddwn">Нет уведомлений</p>
+							</div>
+							
+							<div class="dropdown7_str"></div>
+							
+							<div class="other_order">
+								<h3 class="ddwn">Аукционы</h3>
+								<h4 class="ddwn">Аукцион №0001 Закончиться через 20 мин.</h4>
+								<p class="ddwn">13:36</p>
+								<h4 class="ddwn">Заказ №0001 Вам предложиди сделку</h4>
+								<p class="ddwn">13:36</p>
+							</div>
+						
+						</div>
+					
+					</div>
+					
+					
+					
+					<div class="vertical_str"></div>
+					
+					<img class="header_user_icon" src="icons/header_user_icon.png" alt="user icon">
+
+						
+						
+					<div id="wrapper_dropdown_6" class="wrapper_dropdown">
+					
+						<span>Егор <img src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+							<div id="dropdown6" class="dropdown">
+							
+								<h2 class="ddwn">Личный кабинет</h2>
+								
+								<div class="dropdown_str"></div>
+							
+								<div class="user_dropdown_str">
+									<img src="icons/icon1.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Грузы</a>
+									<img src="icons/arrowdown.png" class="user_dropdown_str_arrow" alt="arrow before">
+								</div>
+								
+								<div class="user_dropdown_str" onclick="inner_dropdown2Click(event)">
+									<img src="icons/icon2.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Транспорт </a>
+									<img id="arrow_inner_dropdown2" src="icons/arrowdown.png" class="user_dropdown_str_arrow"  alt="arrow before">
+								</div>
+								
+								<div id="inner_dropdown2" class="inner_dropdown">
+									<p>Мой транспорт</p>
+									<p>Не подтверждённые</p>
+									<p>В работе</p>
+									<p>Скрытые</p>
+								</div>
+								
+								<div class="user_dropdown_str">
+									<img src="icons/icon3.png" class="user_dropdown_str_icon"  alt="arrow before">
+									<a href="#">Аукцион</a>
+									<img src="icons/arrowdown.png" class="user_dropdown_str_arrow" alt="arrow before">
+								</div>
+								
+								<div class="user_dropdown_str">
+									<img src="icons/icon4.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Компания</a>
+								</div>
+								<div class="user_dropdown_str">
+									<img src="icons/icon5.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Настройки</a>
+								</div>
+								<div class="user_dropdown_str">
+									<img src="icons/icon6.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Реф. программа</a>
+								</div>
+								<div class="user_dropdown_str">
+									<img src="icons/icon7.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Ваша скидка</a>
+								</div>
+								<div class="user_dropdown_str">
+									<img src="icons/icon8.png" class="user_dropdown_str_icon" alt="arrow before">
+									<a href="#">Реклама</a>
+								</div>
+								
+								<button class="dropdown_button" onclick="buttonExitClick()">Выйти</button>
+								
+						</div>
+					</div>
+				</div>
+				
+				<div class="tools_bar1">
+				
+					<img id="search_icon11" class="search_icon1" src="icons/searchicon.png" alt="search icon">
+					
+					<div class="search_window1">
+					
+						<div class="search_pole">
+						
+							<img id="search_icon21" class="search_icon" src="icons/searchicon.png" alt="search icon">
+							<input type="search" placeholder="Введите свой поисковой запрос">
+							<input type="submit" value="Найти">
+						
+						</div>
+						
+						<div class="search_window_button_bar1">
+							
+							<div class="search_window_button_bar_str1">
+								<p>Грузы</p>
+							</div>
+							
+							<div class="search_window_str1"></div>
+							
+							<div class="search_window_button_bar_str1">
+								<p>Транспорт</p>
+							</div>
+							
+							<div class="search_window_str1"></div>
+							
+							<div class="search_window_button_bar_str1">
+								<p>Аукционы</p>
+							</div>
+							
+							<div class="search_window_str1"></div>
+							
+							<div class="search_window_button_bar_str1">
+								<p>Новости</p>
+							</div>
+							
+						</div>
+					
+					</div>
+					
+					<div id="wrapper_dropdown_5" class="wrapper_dropdown">
+						<span id="lang_name0" class="ddwn">Ru <img src="icons/arrowdown.png" alt="arrow before"> </span>
+						
+						<div id="dropdown5" class="dropdown">
+							<h2 class="ddwn">Язык</h2>
+							
+							<div class="dropdown4_str">
+								<input type="radio" id="check01" checked="checked" onclick="languageCheck0(event)">
+								<label for="check01">Русский</label>
+							</div>
+							<div class="dropdown4_str" >
+								<input type="radio" id="check02" onclick="languageCheck0(event)">
+								<label for="check02">Английский</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check03" onclick="languageCheck0(event)">
+								<label for="check03">Польский</label>
+							</div>
+							<div class="dropdown4_str">
+								<input type="radio" id="check04" onclick="languageCheck0(event)">
+								<label for="check04">Белорусский</label>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="vertical_str"></div>
+					
+					<img class="star_icon" src="icons/star.png" alt="star icon">
+					
+					
+					<div id="wrapper_dropdown_7" class="wrapper_dropdown">
+					
+						<img class="bell_icon" src="icons/bell.png" alt="bell icon">
+						<img class="note_icon" src="icons/note.png" alt="notification icon">
+						
+						<div id="dropdown7" class="dropdown">
+						
+							<h2 class="ddwn" >Уведомления</h2>
+							
+							<div class="current_order">
+								<h3 class="ddwn">Грузы</h3>
+								<h4 class="ddwn">Заказ №0004 Подтвердите <br>статус</h4>
+								<p class="ddwn">13:36</p>
+							</div>
+							
+							<div class="other_order">
+								<h3 class="ddwn">Транспорт</h3>
+								<p class="ddwn">Нет уведомлений</p>
+							</div>
+							
+							<div class="dropdown7_str"></div>
+							
+							<div class="other_order">
+								<h3 class="ddwn">Аукционы</h3>
+								<h4 class="ddwn">Аукцион №0001 Закончиться через 20 мин.</h4>
+								<p class="ddwn">13:36</p>
+								<h4 class="ddwn">Заказ №0001 Вам предложиди сделку</h4>
+								<p class="ddwn">13:36</p>
+							</div>
+						
+						</div>
+					
+					</div>
+
+					<div class="vertical_str"></div>
+
+					<div class="left_button_bar">
+						<button id="button_left">Регистрация</button>
+						<button id="button_right" onclick="buttonEnterClick()">Вход</button>
+					</div>
+					
+				</div>
+					
+					<div class="vertical_str"></div>
+					
+					<img id="add_button" class="add_button" src="icons/add_button.png" alt="user icon">
+				
+			</div>
+			
+			<div class="mobile_header_container">
+				
+				<div class="mobile_logo">
+					<h2>ЛОГО</h2>
+					<p>Здесь вы найдёте любой транспорт и груз</p>
+				</div>
+				
+				<input id="menu_toggle" type="checkbox" />
+				<label class="menu_btn" for="menu_toggle">
+					<span></span>
+				</label>
+			
+				<div class="hidden_menu">
+					<div class="hidden_menu_list">
+						<ul class="mobile_menu">
+							<li><a href="index.html">Грузы</a></li>
+							<li><a href="#">Транспорт</a></li>
+							<li><a href="#">Аукцион</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li id="search"><a href="#"><img class="operators" src="icons/searchicon_white.png" alt="search icon"></a></li>
+						</ul>
+					</div>	
+				</div>
+
+			</div>
+		</header>
+		
+		<div class="pre_section">
+		
+			<p>Здесь вы найдете любой<br>
+			   транспорт и груз</p>
+		
+			<div class="bread_scrums">
+				<img src="icons/bread_scrums.png" alt="arrow icon">
+				<p>Хлебные крошки</p>
+			</div>
+			
+		</div>
+		
+		
+
+		
+		<section class="main_container">
+		
+			<div class="mobile_bread_scrums">
+				<img src="icons/bread_scrums.png" alt="arrow icon">
+				<p>Хлебные крошки</p>
+			</div>
+
+		
+			<div class="mobile_container_image">
+			</div>
+		
+			<div class="left_container">
+				
+
+				<div class="container_image">
+				</div>
+				
+				<div class="container_content">
+				
+					<div class="main_info">
+						<h2>Здесь информация о адересе и времени, загрузки и разгрузки, если будем выводить</h2>
+					</div>
+					
+					<div class="extra_options">
+					
+						<h2>Дополнительные договоренности</h2>
+					
+						<div class="options_block">
+						
+							<div class="checkbox_block">
+								<div class="checkbox_block_str"><input type="checkbox" id="delivery" class="checkbox_input"><label for="delivery"><p><span>Подача: </span>В тот же день</p></label></div>
+								<div class="checkbox_block_str"><input type="checkbox" id="commision" class="checkbox_input"><label for="commision"><p><span>Коммисия: </span>Беру на себя</p></label></div>
+							</div>
+							
+							<div class="checkbox_block">
+								<div class="checkbox_block_str"><input type="checkbox" id="discount" class="checkbox_input"><label for="discount"><p>Дам скидку на второй заказ</p></label></div>
+								<div class="checkbox_block_str"><input type="checkbox" id="fast_delivery" class="checkbox_input"><label for="fast_delivery"><p>Доставлю быстрее</p></label></div>
+							</div>
+							
+							<div class="mobile_checkbox_block">
+								<div class="checkbox_block_str"><input type="checkbox" id="delivery" class="checkbox_input"><label for="delivery"><p><span>Подача: </span>В тот же день</p></label></div>
+								<div class="checkbox_block_str"><input type="checkbox" id="discount" class="checkbox_input"><label for="discount"><p>Дам скидку на второй заказ</p></label></div>
+								<div class="checkbox_block_str"><input type="checkbox" id="fast_delivery" class="checkbox_input"><label for="fast_delivery"><p>Доставлю быстрее</p></label></div>
+							</div>
+							
+							<button class="confirm_button">Подтвердить</button>
+							
+						</div>
+					
+					
+					</div>
+					
+					<div class="blue_pole">
+						<p>Текст в преимуществами и советами, почему стоит вести диалог через + иконки, которые <br> описывают быстрые преимущества</p>
+					</div>
+					
+					<p class="date_paragraph">16 декабря 2020</p>
+					
+					<div class="comment">
+						
+						<div class="manager_bio">
+							<img class="manager_icon" src="icons/manager_comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Настя</h2>
+						</div>
+						
+						<div class="mobile_manager_bio">
+							<img class="manager_icon" src="icons/manager_comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Настя</h2>
+						</div>
+						
+						<div class="comment_place"><p>Здравствуйте! Начинаю оформлять документы. Все документы прикреплю в вкладку.
+						   И сброшу подтверждение. Как проверите кликните</p>
+						</div>
+						<span>10:25</span>
+						<img class="viwed" src="icons/frame.png" alt="manager icon">
+						
+					</div>
+					
+					
+					
+					<div class="state_window">
+						<div class="doc_icon"><img src="icons/contract.png" alt="document icon"></div>
+						<h2 id="state_window_h2">Документы оформлены</h2>
+						<div class="state_window_button_bar">
+							<button class="state_window_confirm_button">Подтвердить</button>
+							<button class="denide_button">Отклонить</button>
+						</div>
+					</div>
+					
+					<div class="comment">
+						
+						<div class="manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						<div class="mobile_manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						
+						<div class="comment_place"><p>Все отлично! 17 в 8 утра буду на месте. Спасибо</p>
+						</div>
+						<span>10:25</span>
+						<img class="viwed" src="icons/frame.png" alt="manager icon">
+						
+					</div>
+					
+					<div class="container_str"></div>
+					
+					<p class="date_paragraph">17 декабря 2020</p>
+					
+					<div class="comment">
+						
+						<div class="manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						<div class="mobile_manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						<div class="comment_place">
+							<p>Добрый день, груз принял, загрузка прошла. Фото прилагаю</p>
+							<img class="comment_place_img" src="images/truck2.png" alt="comment image">
+							<img class="comment_place_mobile_img" src="images/truck3.png" alt="comment image">
+
+						</div>
+						<span id="3rd">10:25</span>
+						<img id="4rd" class="viwed" src="icons/frame.png" alt="manager icon">
+						
+					</div>
+					
+					<div class="comment">
+						
+						<div class="manager_bio">
+							<img class="manager_icon" src="icons/manager_comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Настя</h2>
+						</div>
+						
+						<div class="mobile_manager_bio">
+							<img class="manager_icon" src="icons/manager_comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Настя</h2>
+						</div>
+						
+						<div class="comment_place"><p>Здравствуйте! Все поняла, ждем на разгрузке. Хорошей дороги!</p>
+						</div>
+						<span>10:25</span>
+						<img class="viwed" src="icons/frame.png" alt="manager icon">
+						
+					</div>
+					
+					<div class="state_window">
+						<div class="doc_icon"><img src="icons/truck_white.png" alt="document icon"></div>
+						<h2>В пути</h2>
+						<button class="await_button">Ждёт подтверждения</button>
+					</div>
+					
+					<div class="comment">
+						
+						<div class="manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						<div class="mobile_manager_bio">
+							<img class="manager_icon" src="icons/comment_icon.png" alt="manager icon">
+							<img class="status_icon" src="icons/status_icon.png" alt="manager icon">
+							<h2>Егор</h2>
+						</div>
+						
+						
+						<div class="comment_place"><p>Настя! Подтвердите пожалуйста статус.</p>
+						</div>
+						<span>10:25</span>
+						<img class="viwed" src="icons/frame.png" alt="manager icon">
+						
+					</div>
+					
+					<div class="comment_window">
+					
+						<h2>Оставьте отзыв</h2>
+						
+						<div class="inner_comment_window">
+						
+								
+							<textarea class="comment_pole">Все отлично. Деньги перевели сразу. Описание соответствовало реальности</textarea>
+							
+							<div class="comment_button_bar">
+							
+								<div class="star_bar">
+									<p>Ваша оценка: </p>
+									<img src="icons/star_active.png" alt="document icon">
+									<img src="icons/star_active.png" alt="document icon">
+									<img src="icons/star_active.png" alt="document icon">
+									<img src="icons/star_active.png" alt="document icon">
+									<img src="icons/star_white.png" alt="document icon">
+								</div>
+								
+								<button class="comment_button">Оставить отзыв</button>
+								
+								<a href="#">Зачем оставлять отзыв?</a>
+								
+							</div>
+							
+
+							
+						</div>
+					
+					</div>
+					
+					<div class="after_comment">
+						<div class="after_comment_left">
+							<h3>Зачем нужно оставлять отзыв</h3>
+							<ul>
+								<li><span>Вы повышаете свои метрики, что позволяет вам быстрее найти партнера</span></li>
+								<li><span>Вы помогаете выбрать другим пользователям партнера</span></li>
+								<li><span>Еще выгода</span></li>
+							</ul>
+						 </div>
+						 
+						<div class="after_comment_right">
+							<p>Оставьте отзыв и получите скидку 30% на следующий заказ</p>
+						</div>
+							
+					</div>
+					
+					<div class="comment_form">
+						<h2>Перевести заказа в этап <span>в пути</span></h2>
+						
+						<img id="comment_form" src="images/form.png" alt="comment form">
+						
+						<textarea class="mobile_comment_form">введите текст...</textarea>
+						
+						<button class="mobile_comment_form_button">Отправить</button>
+						
+					</div>
+					
+					
+					
+					
+				</div>
+				
+			</div>
+			
+			<div class="right_container">
+			
+				<div class="right_container_window" id="contact_info">
+				
+					<h2>Контакты</h2>
+					
+					<div class="right_container_window_block">
+						<img class="company_logo" src="icons/company_logo.png" alt="company logo">
+						<div class="block_info">
+							<h3>(ООО) «СТА Логистик»</h3>
+							<p>Логистическая компания</p>
+							<a href="#">Реквизиты</a>
+						</div>
+					</div>
+					
+					<div class="right_container_window_block">
+						<img class="company_logo" src="icons/manager_icon_large.png" alt="company logo">
+						<div class="block_info">
+							<h3>Настя</h3>
+							<p>С вами работает</p>
+						</div>
+					</div>
+					
+					<h4>Телефоны</h4>
+					<div class="phone_numbers"><h5>+375 17 270 49 79</h5><h5>+375 17 270 49 79</h5></div>
+					<h4>E-mail</h4>
+					<h5>19+@stalogistic.com</h5>
+					
+				</div>
+				
+				<div class="right_container_window" id="deal_info">
+					<h2>Оплата</h2>
+					<h4>Предоплата 30%</h4>
+					
+					<div class="deal_point_window">
+					
+						<div class="deal_point">
+							<img src="icons/done.png" alt="">
+							<p>Заказ подтвержден</p>
+						</div>
+						<div class="deal_point_window_str"></div>
+						
+						<div class="deal_point">
+							<img src="icons/point2.png" alt="">
+							<p>Документы оформлены</p>
+						</div>
+						<div class="deal_point_window_str"></div>
+						
+						<div class="deal_point">
+							<img src="icons/point3.png" alt="">
+							<p>Груз загружен</p>
+						</div>
+						<div class="deal_point_window_str"></div>
+						
+						<div class="deal_point">
+							<img src="icons/point4.png" alt="">
+							<p>Догруз (Если есть)</p>
+						</div>
+						<div class="deal_point_window_str"></div>
+						
+						<div class="deal_point">
+							<img src="icons/point5.png" alt="">
+							<p>В пути</p>
+						</div>
+						<div class="deal_point_window_str"></div>
+						
+						<div class="deal_point">
+							<img src="icons/point6.png" alt="">
+							<p>Доставлен, разружен</p>
+						</div>
+						
+					</div>
+					
+					<a href="#open_cancel_modal_body">Отменить заказ</a>
+					
+				</div>
+				
+				<div id="open_cancel_modal_body" class="modal_body">
+					
+					<div id="cancel_modal_window" class="cancel_modal_window">
+						<h2>Вы уверены, что хотите отменить заказ?</h2>
+						<a href="#close" title="Close" class="close"></a>
+						
+						<div class="cancel_modal_window_button_bar">
+						
+							<button class="cancel_modal_window_button1">Да</button>
+							<button class="cancel_modal_window_button2">Нет</button>
+						
+						</div>
+						
+						<div class="cancel_modal_window_str"></div>
+						
+						<div class="cancel_modal_window_txt">
+							<p>Если отмена будет по вашей вине, то мы не вернем вам коммисиию и вы <a href="#">получите штраф</a></p> 
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="right_container_window" id="documents">
+				
+					<div class="heading">
+						<h2>Документы (фактуры) </h2>
+						<img src="icons/arrowdown.png" alt="arrow before">
+					</div>
+					
+					<div class="documents_window">
+						<div class="document_info">
+							<img src="icons/pdf.png" alt="">
+							<p>Договор (0,53 мб.)</p>
+						</div>
+						<div class="document_info">
+							<img src="icons/pdf.png" alt="">
+							<p>ТТН (0,53 мб.)</p>
+						</div>
+						<div class="document_info">
+							<img src="icons/pdf.png" alt="">
+							<p>Счет-фактура (0,53 мб.)</p>
+						</div>
+						<div class="document_info">
+							<img src="icons/pdf.png" alt="">
+							<p>Акт-приема (0,53 мб.)</p>
+						</div>
+						<div class="document_info">
+							<img src="icons/pdf.png" alt="">
+							<p>Пропуск</p>
+						</div>
+					</div>
+					
+					<div class="add_doc_button"><img src="icons/add_doc.png" alt="add document"><a href="#open_modal_body">Добавить</a></div>
+					
+				</div>
+				
+				<div id="open_modal_body" class="modal_body">
+				
+					<div id="doc_modal_window" class="modal_window">
+						<h2>Добавить документ</h2>
+						<a href="#close" title="Close" class="close" id="close1"></a>
+						
+						<div class="modal_window_button_bar">
+						
+							<button>Загрузить</button>
+							
+							<a href="">Через сервис фактуровня</a>
+						
+						
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="right_container_window" id="car_info">
+					<div class="heading">
+						<h2>Ваше авто</h2>
+						<img src="icons/arrowdown.png" alt="arrow before">
+					</div>
+					
+					<div class="car_numbers">
+						<img class="company_logo" src="icons/company_logo.png" alt="company logo">
+						
+						<div class="car_driver">
+							<h2>MAN 535 (AA1691-7)</h2>
+							<p>Водитель:</p>
+							<h3>Егор Кравцов</h3>
+							<p>Телефон:</p>
+							<h3>+375 29 360 - 45 -77</h3>
+							<a href="#">Ссылка на отслеживание</a>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section>
+		
+		<footer>
+		
+			
+		
+			<div class="footer_top">
+			
+				<div class="footer_main_block">
+				
+					<h2>Основное</h2>
+					
+					<div class="footer_main_block_info">
+					
+						<div class="main_block_info">
+							<h3>Грузы</h3>
+							<a>Список</a>
+							<br>
+							<a>На карте</a>
+						</div>
+						<div class="main_block_info">
+							<h3>Транспорт</h3>
+							<a>Списком</a>
+							<a>Рассчитать стоимость</a>
+						</div>
+						<div class="main_block_info">
+							<h3>Аукцион</h3>
+							<a>Грузы</a>
+							<br>
+							<a>Транспорт</a>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="footer_top_line"></div>
+				
+				
+				<div class="footer_extra_block">
+					<h2>Дополнительно</h2>
+					<a>О нас</a><br>
+					<a>Как работает</a><br>
+					<a>Новости</a><br>
+					<a>База знаний</a><br>
+					<a>Контакты</a><br>
+					<a>Раздел если будет</a>
+				</div>
+				
+				<div class="footer_top_line"></div>
+				
+				<div class="footer_tech_block">
+				
+					<h2>Техническая поддержка</h2>
+					
+					<div class="numbers_block">
+						<div class="numbers_block1">
+							<p>Телефон</p>
+							<h3>+375 29 360-45-77</h3>
+						</div>
+						<div id="numbers_block_2" class="numbers_block1">
+							<p>E-mail</p>
+							<h3>sup@zigmus.com</h3>
+							<button>Написать</button>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<div id="footer_line"></div>
+			
+			<div class="footer_bottom">
+			
+				<p id="caution">Платформа работает в beta <br> режиме</p>
+				<a>Пользовательское соглашение</a>
+				<a>Политика конфиденциальности</a>
+				<div class="social_medias">
+					<p>
+						<a href=""><img id="vk" class="sm_icon" src="icons/vk.png" alt="company logo"></a>
+						<a href=""><img id="face" class="sm_icon" src="icons/face.png" alt="company logo"></a>
+						<a href=""><img id="instagram" class="sm_icon" src="icons/instagram.png" alt="company logo"></a>
+					</p>
+				</div>
+				<a>Предложить идею</a>
+				
+			</div>
+			
+		</footer>
+		
+	</body>
+
+</html>
